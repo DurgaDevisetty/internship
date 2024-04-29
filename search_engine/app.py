@@ -11,9 +11,8 @@ def load_data(csv_file):
 
 # Function to load trained models
 def load_models():
-    count_vectorizer = joblib.load(r"C:\Users\sravanth\count_vectorizer.pkl")
-    tfidf_transformer = joblib.load(r"C:\Users\sravanth\tfidf_transformer.pkl")
-    tfidf_matrix = joblib.load(r"C:\Users\sravanth\tfidf_matrix.pkl")
+    count_vectorizer = joblib.load(r"C:\Users\Hari D\OneDrive\Documents\search_project\count_vectorizer.pkl")
+    tfidf_matrix = joblib.load(r"C:\Users\Hari D\OneDrive\Documents\search_project\tfidf_matrix.pkl")
     return count_vectorizer, tfidf_transformer, tfidf_matrix
 
 # Function to preprocess query
@@ -34,7 +33,7 @@ def retrieve_similar_documents(query, count_vectorizer, tfidf_transformer, tfidf
 def main():
     st.title('Search Engine')
 
-    data = load_data(r"C:\Users\sravanth\Sub_Titles1.csv")
+    data = load_data(r"Sub_Titles1.csv")
 
     count_vectorizer, tfidf_transformer, tfidf_matrix = load_models()
 
